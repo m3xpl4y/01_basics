@@ -68,22 +68,23 @@ public class CubeGame
         p2LoseNumb = playerTwo < 6;
 
 
-        if(p1WinNumb == p2WinNumb)
+
+        if(p1WinNumb && p2WinNumb)
         {
             System.out.println("Spiel ist unentschieden!");
         }
-        else if(p2WinNumb = true)// text fehlt
+        else if(p2WinNumb && p1LoseNumb)
         {
             System.out.println(playerName + " hat Gewonnen!");
         }
-//        else if()
-//        {
-//            System.out.println("Computer hat gewonnen!");
-//        }
-//        else if()
-//        {
-//            System.out.println("Keiner hat gewonnen!");
-//        }
+        else if(p1WinNumb && p2LoseNumb)
+        {
+            System.out.println("Computer hat gewonnen!");
+        }
+        else if(p1LoseNumb && p2LoseNumb)
+        {
+            System.out.println("Keiner hat gewonnen!");
+        }
 
     }
 
