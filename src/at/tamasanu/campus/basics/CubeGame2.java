@@ -47,25 +47,34 @@ public class CubeGame2 {
             playerOneSum = playerOneSum + playerOne;
             //System.out.println(playerOne);
         }
+        System.out.println("---------------------------------");
         System.out.println("Der Computer hat die Augensumme " + playerOneSum);
 
         for (int i = 0; i <= 6; i++) {
             playerTwo = random.nextInt(6 - 0) + 1;
             playerTwoSum = playerTwoSum + playerTwo;
         }
+        System.out.println("---------------------------------");
         System.out.println("Die Augensumme der Würfel von "+ playerName+ " ist " +playerTwoSum);
+        System.out.println("---------------------------------");
 
         if(playerOneSum == playerTwoSum)
         {
+            System.out.println("********************");
             System.out.println("Spiel ist unentschieden!");
+            System.out.println("********************");
         }
         else if(playerTwoSum > playerOneSum)
         {
-                System.out.println(playerName + " hat Gewonnen!");
+            System.out.println("********************");
+            System.out.println(playerName + " hat Gewonnen!");
+            System.out.println("********************");
         }
         else if(playerTwoSum < playerOneSum)
         {
-                System.out.println("Computer hat gewonnen!");
+            System.out.println("********************");
+            System.out.println("Computer hat gewonnen!");
+            System.out.println("********************");
         }
 
     }
