@@ -35,7 +35,7 @@ public class CubeGame
 
 
     }
-    public static void m_menu()
+    private static void m_menu()
     {
         String[] menu = {"1. Spiel Starten", "2. Beenden"};
         System.out.println("Wähle aus folgenden Möglichkeiten:");
@@ -46,7 +46,7 @@ public class CubeGame
             System.out.println(menu[i]);
         }
     }
-    public static void Game()
+    private static void Game()
     {
         Random random = new Random();
 

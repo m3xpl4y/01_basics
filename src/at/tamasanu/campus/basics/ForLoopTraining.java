@@ -19,17 +19,21 @@ public class ForLoopTraining {
 //        }
 
         Scanner sc = new Scanner(System.in);
-        int num;
-        int fact = 1;
 
-        System.out.println("Enter a number: ");
-        num = sc.nextInt();
+        int base = 5;
+        int power = 2;
+        int result = 1;
 
-        for (int i = 1; i <= num; i++) {
-            fact *= i;
-            //fact = fact * i;
-            System.out.println("Factorial_alle_zahlen: " + fact);
+//        System.out.println("Base Nummer Eingeben:");
+//        base = sc.nextInt();
+//
+//        System.out.println("Power Nummer Eingeben:");
+//        power = sc.nextInt();
+
+        for (int i = 1; i <=power ; i++) {
+            result = result * base;
+            System.out.println("Result: Bis zum Endbetrag " + result);
         }
-        System.out.println("Factorial: " + fact);
+        System.out.println("Result: " + result);
     }
 }

@@ -1,4 +1,5 @@
 package at.tamasanu.campus.basics;
+
 import java.util.Scanner;
 
 public class Bankomat {
@@ -8,7 +9,7 @@ public class Bankomat {
 
         while(true)
         {
-            m_menu();
+            showMenu();
             int mySelection = sc.nextInt();
 
             switch (mySelection){
@@ -56,7 +57,7 @@ public class Bankomat {
         }
 
     }
-    private static void m_menu()
+    private static void showMenu()
     {
         String[] menu = {"1. Einzahlen", "2. Auszahlen", "3. Kontostand", "4. Beenden"};
         System.out.println("Wählen Sie aus folgenden Möglichkeiten:");
