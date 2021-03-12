@@ -13,5 +13,6 @@ public class ArraysAufgabe1 {
             sum = sum + intArray[i];
         }
         System.out.println("Die Summe des Arrays ist: " +sum);
+        System.out.println("Das wars!");
     }
 }
