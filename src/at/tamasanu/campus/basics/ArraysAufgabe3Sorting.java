@@ -7,7 +7,6 @@ public class ArraysAufgabe3Sorting {
     public static void main(String[] args) {
         Random rnd = new Random();
         int[] intArray = new int[10];
-        int[] intArray2 = new int[10];
 
         for (int i = 0; i < intArray.length; i++) {
             int rndNumb = rnd.nextInt(45);
