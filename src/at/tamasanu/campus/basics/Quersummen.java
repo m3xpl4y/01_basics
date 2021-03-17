@@ -1,44 +1,39 @@
 package at.tamasanu.campus.basics;
 
-
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Arrays;
 
 public class Quersummen {
     public static void main(String[] args) {
         int sum = 0;
-        int startNr = 1;
-        int endNr = 1000;
-        int[][] testArray = new int[startNr][endNr];
+        int[] intArray = new int[1000];
+        int[] freqArray = new int [28];
 
         for (int j = 1; j < 1000; j++) {
-            String s = Integer.toString(j);
 
-            //int numbLength = s.length();
+            String s = Integer.toString(j);
             int[] numbArray = new int[s.length()];
-            sum = 0;
+            sum = 0; //mit jede neue Schleife wird die Summe auf null gesetzt, damit sie korrekt, wieder verwendet wird
 
             for (int i = 0; i < s.length(); i++) {
-                numbArray[i] = Character.getNumericValue(s.charAt(i));
-                sum = sum + numbArray[i];
+                numbArray[i] = Character.getNumericValue(s.charAt(i)); //wird aus einem String die Zahl als int "gemacht"
+                sum = sum + numbArray[i]; // mit jede neue Schleife wird die Summe, der Schleife angezeigt
             }
-            testArray[sum][0] = sum;
+            intArray[j] = sum;
 
-        }
-
-        //System.out.println(sum);
-        //System.out.println("Quersummer von " +j );
+//            System.out.println("Die Quersumme von: "+ s + " ist " + sum);
+//            System.out.println("Inhalt intArray: " +intArray[j]);
+//            System.out.println("Inhalt intArray: " + Arrays.toString(intArray));
 
 //            if(sum == 15)
 //            {
-//                System.out.println("Die Quersummer von " + j + " ist " + sum);
+//                System.out.println("Summe: "+ intArray[j] + " --" + sum);
 //            }
+            freqArray[sum] += 1;
 
-//            if(sum % 7 == 0)
-//            {
-//                System.out.println("Aufgabe Quersumme 2: " + sum);
-//            }
-
+        }
+        //
+        Arrays.sort(freqArray);
+        System.out.println(Arrays.toString(freqArray));
     }
 }
 
