@@ -20,7 +20,7 @@ public class Quersummen {
             }
             intArray[j] = sum;
 
-//            System.out.println("Die Quersumme von: "+ s + " ist " + sum);
+            System.out.println("Die Quersumme von: "+ s + " ist " + sum);
 //            System.out.println("Inhalt intArray: " +intArray[j]);
 //            System.out.println("Inhalt intArray: " + Arrays.toString(intArray));
 
