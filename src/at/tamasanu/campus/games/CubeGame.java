@@ -1,4 +1,4 @@
-package at.tamasanu.campus.basics;
+package at.tamasanu.campus.games;
 
 import java.util.Random;
 import java.util.Scanner;

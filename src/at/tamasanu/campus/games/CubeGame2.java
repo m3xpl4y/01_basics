@@ -1,4 +1,4 @@
-package at.tamasanu.campus.basics;
+package at.tamasanu.campus.games;
 
 import javax.swing.*;
 import java.util.Random;
@@ -28,7 +28,8 @@ public class CubeGame2 {
                 case 1: Game();
                     break;
                 case 2:
-                    System.exit(0);
+                    MainMenu.main(args);
+                    //System.exit(0);
                     break;
                 default:
                     System.out.println("Bitte einen gültigen Menüpunkt auswählen");
