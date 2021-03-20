@@ -26,8 +26,6 @@ public class guessWords {
             charString[i] = starStr;
         }
         while(true) {
-
-
             System.out.println("Bitte einen Buchstaben auswählen");
             String input = scn.nextLine();
 
