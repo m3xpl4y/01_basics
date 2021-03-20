@@ -22,7 +22,7 @@ public class TicTacToeClass {
         int Win3 = gameArray[2][0] + gameArray[2][1] + gameArray[2][2]; //dritte reihe horizontal
         int Win4 = gameArray[0][0] + gameArray[1][0] + gameArray[2][0]; //erste reihe vertical
         int Win5 = gameArray[0][1] + gameArray[1][1] + gameArray[2][1]; //zweite reihe vertical
-        int Win6 = gameArray[0][0] + gameArray[1][0] + gameArray[2][0]; //dritte reihe vertical
+        int Win6 = gameArray[0][2] + gameArray[1][2] + gameArray[2][2]; //dritte reihe vertical
         int Win7 = gameArray[0][0] + gameArray[1][1] + gameArray[2][2]; //links oben rechts unten
         int Win8 = gameArray[0][2] + gameArray[1][1] + gameArray[2][0]; //rechts oben links unten
 //        System.out.println("xWin1 " + Win1);
