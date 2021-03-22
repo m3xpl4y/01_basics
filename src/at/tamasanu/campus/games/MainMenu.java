@@ -21,7 +21,7 @@ public class MainMenu {
                     TicTacToe.main(args);
                     break;
                 case 4:
-                    System.out.println("Leider ist diese Spiel auch noch nicht fertig, bitte mehr Spenden um es schneller fertig zu haben!");
+                    Hangman.main(args);
                     break;
                 case 5:
                     System.out.println("Diese Spiel ist auch noch nicht fertig!");
