@@ -9,7 +9,8 @@ public class CubeGame2 {
     private static String playerName;
     private static int playerOne = 0;
     private static int playerTwo = 0;
-
+    static int playerOneSum = 0;
+    static int playerTwoSum = 0;
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -40,9 +41,6 @@ public class CubeGame2 {
     private static void Game()
     {
         Random random = new Random();
-        int playerOneSum = 0;
-        int playerTwoSum = 0;
-
         for (int i = 0; i < 6; i++) {
             playerOne = random.nextInt(6 - 0) + 1;
             playerOneSum = playerOneSum + playerOne;
@@ -59,6 +57,11 @@ public class CubeGame2 {
         System.out.println("Die Augensumme der Würfel von "+ playerName+ " ist " +playerTwoSum);
         System.out.println("---------------------------------");
 
+        winConditions();
+
+    }
+    private static void winConditions()
+    {
         if(playerOneSum == playerTwoSum)
         {
             System.out.println("********************");
@@ -77,8 +80,8 @@ public class CubeGame2 {
             System.out.println("Computer hat gewonnen!");
             System.out.println("********************");
         }
-
     }
+
     private static void cube_menu()
     {
         String[] menu = {"1. Spiel Starten", "2. Beenden"};
