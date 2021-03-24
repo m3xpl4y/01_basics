@@ -6,6 +6,9 @@ import java.util.Scanner;
 
 public class TicTacToe {
     static Scanner sc = new Scanner(System.in);
+    static int x;
+    static int y;
+
     public static void main(String[] args) {
         System.out.println("*****************************************");
         System.out.println("              Tic Tac Toe");
@@ -27,37 +30,21 @@ public class TicTacToe {
     {
         try{
             while(true) {
-
                 boolean isValid = false;
-
                 while (!isValid) {
                     System.out.println("Spieler " + TicTacToeClass.player +"! Bitte die Koordinaten eingeben: (mit Komma getrennt)");
                     String input = sc.next();
                     String[] values = input.split(",");
-                    int x = Integer.parseInt(values[0]);
-                    int y = Integer.parseInt(values[1]);
-
+                    x = Integer.parseInt(values[0]);
+                    y = Integer.parseInt(values[1]);
                     if (TicTacToeClass.gameArray[x][y] == ' ') {
                         isValid = true;
                     } else {
                         System.out.println("Dieses Feld ist bereits belegt! Bitte einen anderen Wählen");
                     }
-                    if(TicTacToeClass.player == 1)
-                    {
-                        TicTacToeClass.gameArray[x][y] = 'X';
-                    }
-                    else
-                    {
-                        TicTacToeClass.gameArray[x][y] = 'O';
-                    }
+                    checkPlayer();
                     System.out.println("x = " + x + "  " + "y = " + y);
-                    for (int i = 0; i < 3; i++) {
-                        for (int j = 0; j < 3; j++) {
-                            System.out.print("|" + TicTacToeClass.gameArray[i][j]);
-                        }
-                        System.out.println("|");
-                    }
-
+                    fieldArray();
                 }
                 TicTacToeClass.checkForWin();
                 TicTacToeClass.changePlayer();
@@ -68,12 +55,33 @@ public class TicTacToe {
             System.out.println("Musste das sein?");
         }
     }
+
     static void fillGameArr()
     {
         for (int i = 0; i <3; i++) {
             for (int j = 0; j < 3; j++) {
                 TicTacToeClass.gameArray[i][j] = ' ';
             }
+        }
+    }
+    static void fieldArray()
+    {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print("|" + TicTacToeClass.gameArray[i][j]);
+            }
+            System.out.println("|");
+        }
+    }
+    static void checkPlayer()
+    {
+        if(TicTacToeClass.player == 1)
+        {
+            TicTacToeClass.gameArray[x][y] = 'X';
+        }
+        else
+        {
+            TicTacToeClass.gameArray[x][y] = 'O';
         }
     }
 }
