@@ -12,8 +12,8 @@ public class guessWords {
     static String[] rndWordArray = new String[] {"Zwei","besten","Ansicht","endlich","Stelle","direkt","Beim","Bevölkerung","Viele","solchen","Alle","jungen","Einsatz","richtig","größte","sofort","neuer","ehemaligen","unserer","dürfte","schaffen","Augen","Rußland","Internet","Allerdings","Raum","Mannschaft","neun","kamen","Ausstellung","Zeiten","einzige","meine","Verfahren","Angebot","Richtung","Projekt","niemand","Kampf","weder","tatsächlich","Personen","Heute","geführt","Gespräch","Kreis","Hamburger","Schule","guten","Hauptstadt","durchaus"};
     static String choosenWord = guessWordsClasses.getRandomWord(rndWordArray);
     static String[] stringChoosenWord = new String[choosenWord.length()];
-    static String[] MainCharString = new String[choosenWord.length()];
     static String input = "";
+
     public static void main(String[] args) {
 
         System.out.println("*****************************************");
